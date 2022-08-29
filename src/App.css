@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.App {
+  @apply h-screen w-screen bg-slate-100;
+}
+
+.sidebar {
+  @apply h-screen bg-white flex flex-col max-w-fit p-6;
+}
+
+.logo {
+  @apply flex flex-row gap-1 items-center text-red-500 font-semibold text-2xl mb-6;
+}
+
+.menu-items {
+  @apply flex flex-row gap-2 items-center mt-6 text-lg font-semibold text-blue-500 relative;
+} 
+
+.menu-items:hover {
+  @apply bg-blue-500 text-white rounded-lg p-1;
+}
+
+.logout {
+  @apply absolute bottom-2 gap-1 flex flex-row items-center text-red-600 font-semibold 
+  rounded-md bg-slate-300 pt-3 pr-6 pl-6 pb-3 text-lg cursor-pointer;
+}
+
+.projects-menu-items{
+  @apply flex flex-col absolute bottom-2;
+}
