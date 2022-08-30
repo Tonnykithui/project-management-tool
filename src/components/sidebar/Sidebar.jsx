@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BsClipboardData, BsCalendar3 } from "react-icons/bs";
 import { TiMessages } from "react-icons/ti";
 import { AiOutlineSetting, AiFillApi, AiOutlineLogout } from "react-icons/ai";
@@ -7,16 +7,7 @@ import { GrProjects } from "react-icons/gr";
 
 const Sidebar = () => {
 
-    const menus = [
-        {
-            id:1,
-            title:'Auto xpress design'
-        },
-        {
-            id:2,
-            title:'Leave mgt'
-        }
-    ]
+    const [childMenu, setChildMenu] = useState(false);
     const menuLinks = [
         {
             id:1,
@@ -61,21 +52,31 @@ const Sidebar = () => {
             icon:<AiOutlineSetting />
         }
     ]
+
+    function handleOpenMenu(){
+        setChildMenu(!childMenu)
+    }
+
   return (
     <div className='sidebar'>
         <div className='logo'><AiFillApi />BOARDJET</div>
         <ul>
             {
                 menuLinks && menuLinks.map((menu) => (
-                    <Link key={menu.id} to={menu.path} className='menu-items'>{menu.icon}{menu.title}
+                    <>
+                    <Link key={menu.id} to={menu.path} className={menu.projects ? 'projects-menu': 'menu-items'}
+                    onClick={menu.projects? () => handleOpenMenu() : ""}
+                    >
+                        {menu.icon}{menu.title}
+                    </Link>
                     <div className='projects-menu-items'>
                     {
-                        menu.projects && menu.projects.map((menu) => (
-                            <Link key={menu.id} to={menu.path}>{menu.title}</Link>
+                        childMenu && menu.projects && menu.projects.map((menu) => (
+                            <Link key={menu.id} to={menu.path} className='menu'>{menu.title}</Link>
                         ))
                     }
                     </div>
-                    </Link>
+                    </>
                 ))
             }
         </ul>
