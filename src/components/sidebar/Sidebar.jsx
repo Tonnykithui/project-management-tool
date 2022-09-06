@@ -23,7 +23,7 @@ const Sidebar = () => {
         },
         {
             id:5,
-            path:'Project',
+            path:'/project',
             title:"Projects",
             icon:<GrProjects />,
             projects:[
