@@ -1,8 +1,8 @@
 import React from 'react';
-import './droppable.css';
+import './draggable.css';
 import { BsThreeDotsVertical } from "react-icons/bs";
 
-const Droppable = () => {
+const Draggable = () => {
   return (
     <div className='draggable' onDrag>
         <div className='wrappper'>
@@ -29,4 +29,4 @@ const Droppable = () => {
   )
 }
 
-export default Droppable
+export default Draggable

@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 .App {
-  @apply h-screen w-screen bg-slate-200 overflow-y-hidden;
+  @apply h-screen w-screen bg-slate-200;
 }
 
 .app-layout{
-  @apply flex flex-row gap-2;
+  @apply flex flex-row gap-2 overflow-y-auto;
 }
 
 .sidebar {
