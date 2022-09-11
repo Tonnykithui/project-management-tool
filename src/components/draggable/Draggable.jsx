@@ -11,7 +11,7 @@ const Draggable = () => {
                <BsThreeDotsVertical />
             </div>
             <div className="description">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium provident omnis dolorum! Molestias, reprehenderit neque.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur a.</p>
             </div>
             <div className='percentage'>
 
