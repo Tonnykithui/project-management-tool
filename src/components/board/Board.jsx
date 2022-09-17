@@ -24,41 +24,6 @@ const Board = () => {
     progress:34,
     team:['Tonny', 'Skeet', 'Dreil'],
     deadline:'2 weeks'
-  },
-  {
-    id:4,
-    name:'Chat design app',
-    progress:76,
-    team:['Tonny', 'Skeet', 'Dreil'],
-    deadline:'3 weeks'
-  },
-  {
-    id:3,
-    name:'Task mgt',
-    progress:34,
-    team:['Tonny', 'Skeet', 'Dreil'],
-    deadline:'2 weeks'
-  },
-  {
-    id:4,
-    name:'Chat design app',
-    progress:76,
-    team:['Tonny', 'Skeet', 'Dreil'],
-    deadline:'3 weeks'
-  },
-  {
-    id:3,
-    name:'Task mgt',
-    progress:34,
-    team:['Tonny', 'Skeet', 'Dreil'],
-    deadline:'2 weeks'
-  },
-  {
-    id:4,
-    name:'Chat design app',
-    progress:76,
-    team:['Tonny', 'Skeet', 'Dreil'],
-    deadline:'3 weeks'
   }
 ]
   return (
