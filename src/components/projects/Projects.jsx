@@ -91,7 +91,7 @@ const Projects = () => {
 }
   ]
   return (
-    <div className='w-screen overflow-auto overflow-y-hidden relative h-screen'>
+    <div className='w-screen overflow-auto overflow-y-hidden relative h-screen bg-slate-300'>
         <div className='w-full pl-4 flex flex-row gap-10'>
           <h2 className='font-semibold text-2xl'>Projects</h2>
           <div className='items-center'>

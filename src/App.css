@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .App {
-  @apply h-screen w-screen bg-slate-200;
+  @apply h-screen w-screen;
 }
 
 .app-layout{

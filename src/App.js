@@ -5,19 +5,42 @@ import Projects from './components/projects/Projects';
 import Board from './components/board/Board';
 import Modal from './components/modal/Modal';
 import Home from './components/home/Home';
-import Login from './components/login/Login';
+import { useState } from 'react';
+import Register from './components/auth/register/Register';
+import Login from './components/auth/login/Login';
+import Administration from './components/administration/Administration';
 
 function App() {
+
+  const [loggedIn, setLoggedIn] = useState(true);
+
   return (
     <div className="App">
       <div className='app-layout'>
-         <Sidebar />
-         <Routes>
-           <Route path='/' element={<Home />}/>
-           <Route path='/Project' element={<Projects />}/>
-           <Route path='/task' element={<Board />}/>
-           <Route path='/login' element={<Login />} />
-         </Routes>
+        {
+          loggedIn ?
+            (
+              <>
+                <Sidebar />
+                <Routes>
+                  <Route path='/' element={<Home />} />
+                  <Route path='/Project' element={<Projects />} />
+                  <Route path='/task' element={<Board />} />
+                  <Route path='/teams' element={<Administration />} />
+                </Routes>
+
+              </>
+            )
+            :
+            (
+              <>
+                <Routes>
+                  <Route path='/login' element={<Login />} />
+                  <Route path='/register' element={<Register />} />
+                </Routes>
+              </>
+            )
+        }
       </div>
       {/* <Modal /> */}
     </div>

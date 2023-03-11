@@ -4,6 +4,7 @@ import { TiMessages } from "react-icons/ti";
 import { AiOutlineSetting, AiFillApi, AiOutlineLogout } from "react-icons/ai";
 import { Link } from 'react-router-dom';
 import { GrProjects } from "react-icons/gr";
+import './sidebar.css';
 
 const Sidebar = () => {
 
@@ -16,39 +17,15 @@ const Sidebar = () => {
             icon:<BsClipboardData />
         },
         {
-            id:2,
-            path:'/calendar',
-            title:'Calendar',
-            icon:<BsCalendar3 />
-        },
-        {
             id:5,
             path:'/project',
             title:"Projects",
-            icon:<GrProjects />,
-            projects:[
-                {
-                    id:1,
-                    title:'Task mgt',
-                    path:'/task'
-                },
-                {
-                    id:2,
-                    title:'Chat app design',
-                    path:'/chat'
-                }
-            ]
-        },
-        {
-            id:3,
-            path:'/messages',
-            title:'Messages',
-            icon:<TiMessages />
+            icon:<GrProjects />
         },
         {
             id:4,
-            path:'/settings',
-            title:'Settings',
+            path:'/teams',
+            title:'Teams',
             icon:<AiOutlineSetting />
         }
     ]

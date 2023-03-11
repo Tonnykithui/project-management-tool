@@ -3,7 +3,7 @@
 }
 
 .project-details-card{
-    @apply w-full bg-white rounded-lg mb-4 p-2;
+    @apply w-full bg-white rounded-lg mb-4 p-2 ;
 }
 
 .header {
